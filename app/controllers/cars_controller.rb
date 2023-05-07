@@ -1,4 +1,4 @@
-class Api::CarsController < ApplicationController
+class CarsController < ApplicationController
   skip_before_action :authorize
     def index
       render json: Car.all

@@ -1,4 +1,4 @@
-class Api::RacesCarsController < ApplicationController
+class RacesCarsController < ApplicationController
   def index
       render json: RacesCar.all, include: [:car, :race]
   end

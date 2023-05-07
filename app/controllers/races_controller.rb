@@ -1,4 +1,4 @@
-class Api::RacesController < ApplicationController
+class RacesController < ApplicationController
     
   def index
     races = @current_user.races
