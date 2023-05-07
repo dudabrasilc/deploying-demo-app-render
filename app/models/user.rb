@@ -1,7 +1,12 @@
 class User < ApplicationRecord
-  has_many :recipes
+ 
+  has_many :races, dependent: :destroy
+  has_many :races_cars, through: :races
   
-  has_secure_password
-
+  
   validates :username, presence: true, uniqueness: true
-end
+  validates :password, presence: true, length: { minimum: 6 }
+
+
+  has_secure_password
+  end

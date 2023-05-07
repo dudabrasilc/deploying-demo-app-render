@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { Button } from "../styles";
+import exotic from '../images/exotic-cars.jpg';
 
 function NavBar({ user, setUser }) {
   function handleLogoutClick() {
-    fetch("/api/logout", { method: "DELETE" }).then((r) => {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
       }
@@ -13,47 +12,29 @@ function NavBar({ user, setUser }) {
   }
 
   return (
-    <Wrapper>
-      <Logo>
-        <Link to="/">Reciplease</Link>
-      </Logo>
-      <Nav>
-        <Button as={Link} to="/new">
-          New Recipe
-        </Button>
-        <Button variant="outline" onClick={handleLogoutClick}>
-          Logout
-        </Button>
-      </Nav>
-    </Wrapper>
+    <section>
+      <Link to="/"><img src={exotic} className="logo" alt="logo" /> </Link>
+      <nav className='navbar'>
+        <div>
+          {user ? (
+            <>
+              <Link to="/car-list" className="collection">Collection</Link>
+              <Link to="/my-races" className="races">My Races</Link>
+              <Link to="/race_tracks" className="tracks">Tracks</Link>
+              <Link to="/add-car" className="add-car">Upload Car</Link>
+              <Link to="/" className="logout" onClick={handleLogoutClick}>Logout</Link>
+            </>
+          ) : (
+            <>
+              <Link to="/app-signup" className="sign-up">Sign-up</Link>
+              <Link to="/app-login" className="login">Login</Link>
+            </>
+          )}
+        </div>
+      </nav>
+    </section>
   );
 }
 
-const Wrapper = styled.header`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-`;
-
-const Logo = styled.h1`
-  font-family: "Permanent Marker", cursive;
-  font-size: 3rem;
-  color: deeppink;
-  margin: 0;
-  line-height: 1;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-`;
-
-const Nav = styled.nav`
-  display: flex;
-  gap: 4px;
-  position: absolute;
-  right: 8px;
-`;
-
 export default NavBar;
+
