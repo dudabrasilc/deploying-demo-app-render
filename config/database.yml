@@ -81,4 +81,4 @@ test:
 #
 production:
   <<: *default
-  url: phase_4_deploying_demo_app_development
+  url: <%= ENV['DATABASE_URL'] %>
