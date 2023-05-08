@@ -4,6 +4,5 @@ class RaceTracksController < ApplicationController
       render json: RaceTrack.all, include: [:races], status: :ok
     end
   
-
 end
 
