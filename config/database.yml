@@ -81,4 +81,5 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: exotic_cars_race_db
