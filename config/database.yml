@@ -81,4 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: phase_4_deploying_demo_app_development
+  database: exotic_cars_race_db
