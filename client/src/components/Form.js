@@ -114,11 +114,11 @@ function Form({ carsData, setCarsData, addCar }) {
             <br></br>
 
             <label className="labels">Top Speed (mph):</label>
-            <input type="number" name="top_speed" value={formData.top_speed} onChange={handleChange} />
+            <input type="text" name="top_speed" value={formData.top_speed} onChange={handleChange} />
             <br></br>
 
             <label className="labels">0-60mph (sec):</label>
-            <input type="number" name="zero_to_sixty_mph" value={formData.zero_to_sixty_mph} onChange={handleChange} />
+            <input type="text" name="zero_to_sixty_mph" value={formData.zero_to_sixty_mph} onChange={handleChange} />
             <br></br>
 
             <label className="labels">Weight (lbs):</label>
