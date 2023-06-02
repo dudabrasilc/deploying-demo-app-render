@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 
-function Form({ carsData, setCarsData, addCar }) {
+function Form({ addCar }) {
   const [formData, setFormData] = useState({
     make: "",
     model: "",

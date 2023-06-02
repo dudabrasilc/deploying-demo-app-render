@@ -1,7 +1,7 @@
 import { React } from 'react';
 import RaceTrackCard from './RaceTrackCard';
 
-function RaceTracks({raceTracks}) {
+function RaceTracks({ raceTracks }) {
 
   return (
     <div className='tracks-page'>

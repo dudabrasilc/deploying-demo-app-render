@@ -96,7 +96,6 @@ const SignUp = () => {
           />
           <br></br>
           <br></br>
-          {/* {showPasswordMatchError && passwordMatch && <small>{passwordMatch}</small>} */}
           <br></br>
           {errors.map(error => <><small>{error}</small><br></br></>)}
           {errors && errors.map((error) => <small>{error[0].slice(0,-1)}</small>)}
