@@ -88,6 +88,7 @@ function Form({ carsData, setCarsData, addCar }) {
               <option className="options" name="selectedMake" value="McLaren"> McLaren </option>
               <option className="options" name="selectedMake" value="Pagani"> Pagani </option>
               <option className="options" name="selectedMake" value="Koenigsegg"> Koenigsegg </option>
+              <option className="options" name="selectedMake" value="Ford"> Ford </option>
             </select>
           <br></br>
             <label className="labels">Model:</label>
