@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { CarsDataContext } from "../App";
+// import { CarsDataContext } from "../App";
 
 const CarsPage = ({ user, races, setRaces, addCarToRace }) => {
-  const [selectedRace, setSelectedRace] = useState(user?.races[0]?.id);
+  const [selectedRace, setSelectedRace] = useState(races[0]?.id);
   let navigate = useNavigate();
   const { id } = useParams();
   const [carData, setCarData] = useState(null);
-  const { carsData, setCarsData } = useContext(CarsDataContext);
+  // const { carsData, setCarsData } = useContext(CarsDataContext);
 
   useEffect(() => {
     fetch(`/cars/${id}`)
@@ -39,9 +39,7 @@ const CarsPage = ({ user, races, setRaces, addCarToRace }) => {
       .then((data) => {
         addCarToRace(data);
         navigate("/my-races");
-      })
-      .then((ata) => {
-        alert(`${make} ${model} was added to the list successfuly!`);
+        alert(`${make} ${model} was added to the list successfully!`);
       });
   }
 
