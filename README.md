@@ -12,6 +12,8 @@
 ## Deployed application link:
 https://exotic-cars-race.onrender.com/
 
+<br/>
+
 ## Description
 This application allows a user to register on the Exotic Cars Race website and take advantage of the following features:
 - Explore a collection of exotic sports cars;
